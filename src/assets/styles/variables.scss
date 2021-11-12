@@ -1,0 +1,30 @@
+
+$bgColor: #000;
+$textColor: #fff;
+
+// Fuentes
+
+// Fuentes titulo desktop
+$FontFamilyDesktop: 'Open Sans';
+$FontWeightBlackDesktop: 700;
+$FontStyleDesktop: normal;
+$FontSizeTitleDesktop: 36px;
+$FontLineHeightDesktop: 25px;
+$FontAlignDesktop: center;
+
+  // Fuentes titulo phone
+$FontFamilyPhone: 'Open Sans';
+$FontWeightBlackPhone: 700;
+$FontStylePhone: normal;
+$FontSizeTitlePhone: 18px;
+$FontLineHeightPhone: 25px;
+$FontAlignPhone: center;
+
+    // Fuentes titulo responsive
+@mixin phone {
+  @media only screen and (max-width: 700px){
+    @content
+  }
+}
+
+  // Fuentes ______
