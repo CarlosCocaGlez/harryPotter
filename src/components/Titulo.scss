@@ -1,0 +1,25 @@
+@import '../assets/styles/variables.scss';
+
+.Titulo{
+  font-family: $FontFamilyDesktop;
+  font-weight: $FontWeightBlackDesktop;
+  font-style: $FontStyleDesktop;
+  font-size: $FontSizeTitleDesktop;
+  line-height: $FontLineHeightDesktop;
+  text-align: $FontAlignDesktop;
+  @include phone{
+    font-family: $FontFamilyPhone;
+    font-weight: $FontWeightBlackPhone;
+    font-style: $FontStylePhone;
+    font-size: $FontSizeTitlePhone;
+    line-height: $FontLineHeightPhone;
+    text-align: $FontAlignPhone;
+  }
+}
+
+
+
+
+
+
+
