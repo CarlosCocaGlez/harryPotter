@@ -2,11 +2,62 @@
 $bgColor: #000;
 $textColor: #fff;
 
+// Botones
+
+// Botones agregar y favoritos
+$addFavButtonPosition: absolute;
+$addFavButtonBgColor: #6B63B5;
+$addFavButtonBorderRadius: 10px;
+$addFavButtonFont: 'Open Sans';
+$addFavButtonWeight: 600;
+$addFavButtonStyle: normal;
+$addFavButtonTextTransform: uppercase;
+$addFavButtonCursor: pointer;
+$addFavButtonLineHeight: 25px;
+$addFavButtonWidth: 140px;
+$addFavButtonAlign: center;
+$addFavButtonBorderStyle: none;
+$addFavButtonColor: #FFFFFF;
+
+  // Boton favorito
+$favBorderRight: 1px solid #000;
+
+  // Boton agregar
+$addBorderLeft: 1px solid #000;
+
+// Boton estudiantes-staff
+$stButtonColor: white;
+$stButtonHeight: 67px;
+$stButtonWidth: 288px;
+$stButtonBorder: 2px solid #6B63B5;
+$stButtonCursor: pointer;
+$stButtonTextTransform: uppercase;
+$stButtonFontFamily: 'Open Sans';
+$stButtonWeight: 600;
+$stButtonStyle: normal;
+$stButtonSize: 17px;
+$stButtonLineHeight: 25px;
+$stButtonLetterSpacing: 0.2em;
+$stButtonLeft: 0;
+$stButtonRight: 0;
+$stButtonTop: 0;
+$stButtonBottom: 0;
+$stButtonBg: rgba(0, 0, 0, 0.6);
+$stButtonBorderRadius: 4px;
+
+  // Boton estudiantes-staff phone
+$stButtonHeightPhone: 42.93px;
+$stButtonWidthPhone: 140px;
+$stButtonBorderPhone: 4px solid #6B63B5;
+$stButtonSizePhone: 13px;
+$stButtonLineHeightPhone: 16px;
+
+
 // Fuentes
 
 // Fuentes titulo desktop
 $FontFamilyDesktop: 'Open Sans';
-$FontWeightBlackDesktop: 700;
+$FontWeightWeightDesktop: 700;
 $FontStyleDesktop: normal;
 $FontSizeTitleDesktop: 36px;
 $FontLineHeightDesktop: 25px;
@@ -14,13 +65,13 @@ $FontAlignDesktop: center;
 
   // Fuentes titulo phone
 $FontFamilyPhone: 'Open Sans';
-$FontWeightBlackPhone: 700;
+$FontWeightWeightPhone: 700;
 $FontStylePhone: normal;
 $FontSizeTitlePhone: 18px;
 $FontLineHeightPhone: 25px;
 $FontAlignPhone: center;
 
-    // Fuentes titulo responsive
+    // Responsive
 @mixin phone {
   @media only screen and (max-width: 700px){
     @content

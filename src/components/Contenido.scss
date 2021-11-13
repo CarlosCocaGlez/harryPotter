@@ -1,0 +1,37 @@
+@import '../assets/styles/variables.scss';
+
+.botones{
+  justify-content: center;
+  display: flex;
+  .boton{
+    color: $stButtonColor;
+    height: $stButtonHeight;
+    width: $stButtonWidth;
+    border: $stButtonBorder;
+    cursor: $stButtonCursor;
+    text-transform: $stButtonTextTransform;
+    font-family: $stButtonFontFamily;
+    font-weight: $stButtonWeight;
+    font-style: $stButtonStyle;
+    font-size: $stButtonSize;
+    line-height: $stButtonLineHeight;
+    letter-spacing: $stButtonLetterSpacing;
+    left: $stButtonLeft;
+    right: $stButtonRight;
+    top: $stButtonTop;
+    bottom: $stButtonBottom;
+    background: $stButtonBg;
+    border-radius: $stButtonBorderRadius;
+    @include phone{
+      height: $stButtonHeightPhone;
+      width: $stButtonWidthPhone;
+      border: $stButtonBorderPhone;
+      font-size: $stButtonSizePhone;
+      line-height: $stButtonLineHeightPhone;
+    }
+  }
+
+  .boton__student{
+    margin-right: 5%;
+  }
+}

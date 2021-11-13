@@ -1,19 +1,86 @@
 @import '../assets/styles/variables.scss';
 
-.Titulo{
-  font-family: $FontFamilyDesktop;
-  font-weight: $FontWeightBlackDesktop;
-  font-style: $FontStyleDesktop;
-  font-size: $FontSizeTitleDesktop;
-  line-height: $FontLineHeightDesktop;
-  text-align: $FontAlignDesktop;
+.addFavButton{
+  position: $addFavButtonPosition;
+  top: 0;
+  right: 375px;
+
+  .addFavButton__AddFav{
+    background-color: $addFavButtonBgColor;
+    border-style: $addFavButtonBorderStyle;
+    width: $addFavButtonWidth;
+    cursor: $addFavButtonCursor;
+    text-transform: $addFavButtonTextTransform;
+    font-family: $addFavButtonFont;
+    font-weight: $addFavButtonWeight;
+    font-style: $addFavButtonStyle;
+    line-height: $addFavButtonLineHeight;
+    text-align: $addFavButtonAlign;
+    color: $addFavButtonColor;
+  }
+
+  .addFavButton__Fav{
+    border-bottom-left-radius: $addFavButtonBorderRadius;
+    border-right: $favBorderRight;
+    @include phone{
+      border-top-left-radius: $addFavButtonBorderRadius;
+    }
+  }
+
+  .addFavButton__Add{
+    border-bottom-right-radius: $addFavButtonBorderRadius;
+    border-left: $addBorderLeft;
+    @include phone{
+      border-top-right-radius: $addFavButtonBorderRadius;
+    }
+  }
+
+  .addFavButton__Icon{
+    position: absolute;
+    top: 7px;
+    margin-left: 5px;
+    width: 16px;
+  }
+
   @include phone{
-    font-family: $FontFamilyPhone;
-    font-weight: $FontWeightBlackPhone;
-    font-style: $FontStylePhone;
-    font-size: $FontSizeTitlePhone;
-    line-height: $FontLineHeightPhone;
-    text-align: $FontAlignPhone;
+    position: $addFavButtonPosition;
+    top: 96%;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+.titulo{
+  margin-top: 5%;
+
+  .titulo__img{
+    width: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include phone{
+      width: 30%;
+    }
+  }
+
+  .titulo__Titulo{
+    font-family: $FontFamilyDesktop;
+    font-weight: $FontWeightWeightDesktop;
+    font-style: $FontStyleDesktop;
+    font-size: $FontSizeTitleDesktop;
+    line-height: $FontLineHeightDesktop;
+    text-align: $FontAlignDesktop;
+    @include phone{
+      font-family: $FontFamilyPhone;
+      font-weight: $FontWeightWeightPhone;
+      font-style: $FontStylePhone;
+      font-size: $FontSizeTitlePhone;
+      line-height: $FontLineHeightPhone;
+      text-align: $FontAlignPhone;
+    }
   }
 }
 

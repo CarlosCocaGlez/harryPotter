@@ -3,6 +3,10 @@
 body{
   background-image: url('../images/Hogwarts1.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   background-color: $bgColor;
   color: $textColor;
+  @include phone{
+    background-image: none;
+  }
 }
