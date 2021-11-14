@@ -3,7 +3,7 @@
 .addFavButton{
   position: $addFavButtonPosition;
   top: 0;
-  right: 375px;
+  right: 20%;
 
   .addFavButton__AddFav{
     background-color: $addFavButtonBgColor;
@@ -24,6 +24,7 @@
     border-right: $favBorderRight;
     @include phone{
       border-top-left-radius: $addFavButtonBorderRadius;
+      border-bottom-left-radius: 0;
     }
   }
 
@@ -32,6 +33,7 @@
     border-left: $addBorderLeft;
     @include phone{
       border-top-right-radius: $addFavButtonBorderRadius;
+      border-bottom-right-radius: 0;
     }
   }
 
@@ -44,7 +46,7 @@
 
   @include phone{
     position: $addFavButtonPosition;
-    top: 96%;
+    top: 97%;
     right: 0;
     left: 0;
     display: flex;
@@ -67,19 +69,19 @@
   }
 
   .titulo__Titulo{
-    font-family: $FontFamilyDesktop;
-    font-weight: $FontWeightWeightDesktop;
-    font-style: $FontStyleDesktop;
-    font-size: $FontSizeTitleDesktop;
-    line-height: $FontLineHeightDesktop;
-    text-align: $FontAlignDesktop;
+    font-family: $fontFamilyDesktop;
+    font-weight: $fontWeightWeightDesktop;
+    font-style: $fontStyleDesktop;
+    font-size: $fontSizeTitleDesktop;
+    line-height: $fontLineHeightDesktop;
+    text-align: $fontAlignDesktop;
     @include phone{
-      font-family: $FontFamilyPhone;
-      font-weight: $FontWeightWeightPhone;
-      font-style: $FontStylePhone;
-      font-size: $FontSizeTitlePhone;
-      line-height: $FontLineHeightPhone;
-      text-align: $FontAlignPhone;
+      font-family: $fontFamilyPhone;
+      font-weight: $fontWeightWeightPhone;
+      font-style: $fontStylePhone;
+      font-size: $fontSizeTitlePhone;
+      line-height: $fontLineHeightPhone;
+      text-align: $fontAlignPhone;
     }
   }
 }

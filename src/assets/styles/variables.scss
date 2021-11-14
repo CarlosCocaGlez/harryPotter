@@ -5,7 +5,7 @@ $textColor: #fff;
 // Botones
 
 // Botones agregar y favoritos
-$addFavButtonPosition: absolute;
+$addFavButtonPosition: fixed;
 $addFavButtonBgColor: #6B63B5;
 $addFavButtonBorderRadius: 10px;
 $addFavButtonFont: 'Open Sans';
@@ -43,6 +43,8 @@ $stButtonRight: 0;
 $stButtonTop: 0;
 $stButtonBottom: 0;
 $stButtonBg: rgba(0, 0, 0, 0.6);
+$stButtonBgHover: rgba(107, 99, 181, 0.6);
+$stButtonBgActive: #6B63B5;
 $stButtonBorderRadius: 4px;
 
   // Boton estudiantes-staff phone
@@ -56,20 +58,71 @@ $stButtonLineHeightPhone: 16px;
 // Fuentes
 
 // Fuentes titulo desktop
-$FontFamilyDesktop: 'Open Sans';
-$FontWeightWeightDesktop: 700;
-$FontStyleDesktop: normal;
-$FontSizeTitleDesktop: 36px;
-$FontLineHeightDesktop: 25px;
-$FontAlignDesktop: center;
+$fontFamilyDesktop: 'Open Sans';
+$fontWeightWeightDesktop: 700;
+$fontStyleDesktop: normal;
+$fontSizeTitleDesktop: 36px;
+$fontLineHeightDesktop: 25px;
+$fontAlignDesktop: center;
 
   // Fuentes titulo phone
-$FontFamilyPhone: 'Open Sans';
-$FontWeightWeightPhone: 700;
-$FontStylePhone: normal;
-$FontSizeTitlePhone: 18px;
-$FontLineHeightPhone: 25px;
-$FontAlignPhone: center;
+$fontFamilyPhone: 'Open Sans';
+$fontWeightWeightPhone: 700;
+$fontStylePhone: normal;
+$fontSizeTitlePhone: 18px;
+$fontLineHeightPhone: 25px;
+$fontAlignPhone: center;
+
+// Tarjetas
+$cardBgColor: #fff;
+$cardBorderRadius: 16px;
+$cardMargin: 3.5rem;
+$cardWidth: 515px;
+$cardHeight: 265px;
+$cardColor: #000;
+
+  // Tarjeta lado izquierdo
+$cardWidthLeft: 210px;
+$cardImgWidthLeft: 120px;
+$cardImgHeightLeft: 120px;
+$cardImgBorderRadiusLeft: 50%;
+
+  // Tarjeta lado derecho
+$cardWidthRight: 55%;
+$cardMarginRight: 10px 0 0 20px;
+$cardMarginTopStatusRight: 10px;
+$cardMarginTopStatusFontFamilyRight: 'Open Sans';
+$cardMarginTopStatusFontStyleRight: normal;
+$cardMarginTopStatusFontWeightRight: 600;
+$cardMarginTopStatusFontSizeRight: 14px;
+$cardMarginTopStatusLineHeightRight: 19px;
+$cardMarginTopStatusColorRight: #999999;
+
+    //Tajeta lado derecho icono
+$cardIconMarginLeftRight: 40%;
+$cardIconFontSizeRight: 20px;
+$cardIconCursorRight: pointer;
+
+    // Tarjeta lado derecho nombre
+$cardNameTopRight: 10px;
+$cardNameFontFamilyRight: 'Open Sans';
+$cardNameFontStyleRight: nomral;
+$cardNameFontWeightRight: 600;
+$cardNameFontSizeRight: 30px;
+$cardNameLineHeightRight: 46px;
+$cardNameColorRight: #081F32;
+
+    // Tarjeta lado derecho info
+$cardInfoMarginTopRight: 10px;
+$cardInfoFontFamilyRight: 'Open Sans';
+$cardInfoFontStyleRight: normal;
+$cardInfoFontWeightRight: bold;
+$cardInfoFontSizeRight: 14px;
+$cardInfoLineHeightRight: 27px;
+
+      // Tarjeta lado derecho datos
+$cardInfoDatosFontWeightRight: normal;
+
 
     // Responsive
 @mixin phone {
