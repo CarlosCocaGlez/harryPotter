@@ -86,6 +86,10 @@ $cardWidthLeft: 210px;
 $cardImgWidthLeft: 120px;
 $cardImgHeightLeft: 120px;
 $cardImgBorderRadiusLeft: 50%;
+$Gryffindor: linear-gradient(135deg, #FF0000 0%, #FED482 100%);
+$Slytherin: linear-gradient(135deg, #1C792B 0%, #82E95E 100%);
+$Hufflepuff: linear-gradient(135deg, #0597B7 0%, #66D1FF 100%);
+$Ravenclaw: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
 
   // Tarjeta lado derecho
 $cardWidthRight: 55%;
@@ -99,7 +103,7 @@ $cardMarginTopStatusLineHeightRight: 19px;
 $cardMarginTopStatusColorRight: #999999;
 
     //Tajeta lado derecho icono
-$cardIconMarginLeftRight: 40%;
+$cardIconMarginLeftRight: 10px;
 $cardIconFontSizeRight: 20px;
 $cardIconCursorRight: pointer;
 

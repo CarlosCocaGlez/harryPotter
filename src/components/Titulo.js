@@ -1,3 +1,4 @@
+
 import './Titulo.scss';
 import { BsFillBookmarkFill } from 'react-icons/bs'
 import { FaUserPlus } from 'react-icons/fa'

@@ -1,5 +1,6 @@
 @import '../assets/styles/variables.scss';
 
+// Botones
 .addFavButton{
   position: $addFavButtonPosition;
   top: 0;
@@ -52,8 +53,9 @@
     display: flex;
     justify-content: center;
   }
-
 }
+
+// Encabezado
 
 .titulo{
   margin-top: 5%;
@@ -85,10 +87,6 @@
     }
   }
 }
-
-
-
-
 
 
 

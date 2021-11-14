@@ -1,5 +1,7 @@
 @import '../assets/styles/variables.scss';
 
+// Botones
+
 .botones{
   justify-content: center;
   display: flex;
@@ -37,7 +39,10 @@
     background: $stButtonBgHover;
   }
 
-  .boton:active{
+  .active{
+    background: $stButtonBgActive;
+  }
+  .active:hover{
     background: $stButtonBgActive;
   }
 
@@ -46,6 +51,8 @@
   }
 }
 
+// Personajes
+
 .container{
   display: flex;
   flex-direction: row;
@@ -53,10 +60,17 @@
   width: 100%;
   justify-content: center;
 
+  .vivo{
+    background-color: #FFFFFF;
+  }
+
+  .muerto{
+    background-color: #d5d5d5;
+  }
+
   .card{
     display: flex;
     overflow: hidden;
-    background-color: $cardBgColor;
     border-radius: $cardBorderRadius;
     margin: $cardMargin;
     width: $cardWidth;
@@ -67,7 +81,7 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #FF0000 0%, #FED482 100%);
+      background: linear-gradient(135deg, #212121 0%, #b4b2b2 100%);
       width: $cardWidthLeft;
 
       img{
@@ -85,11 +99,29 @@
       }
     }
 
+    .gryffindor{
+      background: $Gryffindor;
+    }
+
+    .slytherin{
+      background: $Slytherin;
+    }
+
+    .hufflepuff{
+      background: $Hufflepuff;
+    }
+
+    .ravenclaw{
+      background: $Ravenclaw;
+    }
+
     .card__der{
       width: $cardWidthRight;
       margin: $cardMarginRight;
 
       .card__der__status{
+        display: flex !important;
+        justify-content: space-between;
         text-transform: uppercase;
         margin-top: $cardMarginTopStatusRight;
         font-family: $cardMarginTopStatusFontFamilyRight;
@@ -100,17 +132,18 @@
         color: $cardMarginTopStatusColorRight;
 
         .card__der__status__icon{
-          margin-left: $cardIconMarginLeftRight;
+          margin-right: $cardIconMarginLeftRight;
           font-size: $cardIconFontSizeRight;
           cursor: $cardIconCursorRight;
           @include phone{
             font-size: 20px;
-            margin: 15px 0 0 25px;
+            margin: 0 0 0 0;
           }
         }
 
         @include phone{
-          margin-top: 30px;
+          width: 110%;
+          margin-top: 10px;
           display: inline-flex;
           font-size: 11px;
         }
@@ -128,8 +161,7 @@
           margin-top: 20px;
           font-size: 18px;
           text-align: center;
-          line-height: 10px;
-          width: max-content;
+          line-height: 18px;
         }
       }
 
@@ -151,6 +183,7 @@
       }
 
       @include phone{
+        width: 80%;
         margin: 0 0 0 10px;
       }
     }
@@ -164,10 +197,3 @@
   }
 }
 
-
-/*
-  //background: linear-gradient(135deg, #FF0000 0%, #FED482 100%);
-  //background: linear-gradient(135deg, #1C792B 0%, #82E95E 100%);
-  //background: linear-gradient(135deg, #0597B7 0%, #66D1FF 100%);
-  //background: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
-*/
