@@ -25,6 +25,86 @@ $favBorderRight: 1px solid #000;
   // Boton agregar
 $addBorderLeft: 1px solid #000;
 
+    // Modal agregar
+$modalBgColor: rgba(0, 0, 0, 0.4);
+
+      // Modal agregar contenido
+$modalBgContentColor: #fefefe;
+$modalContentBorder: 1px solid #888;
+$modalContentBorderRadius: 10px;
+
+      // Modal agregar contenido titulo
+$modalContentTitleFontFamily: 'Open Sans';
+$modalContentTitleFontWeight: 600;
+$modalContentTitleFontStyle: normal;
+$modalContentTitleFontSize: 24px;
+$modalContentTitleLineHeight: 40px;
+$modalContentTitleColor: #000000;
+
+      // Modal agregar contenido inputs
+$modalContentInputsFontFamily: 'Open Sans';
+$modalContentInputsFontWeight: 400;
+$modalContentInputsFontStyle: normal;
+$modalContentInputsFontSize: 14px;
+$modalContentInputsLineHeight: 32px;
+$modalContentInputsLetterSpacing: 0.01em;
+$modalContentInputsColor: #263238;
+
+        // Modal agregar contenido inputs input
+$modalContentInputsInputFontFamily: 'Open Sans';
+$modalContentInputsInputFontWeight: 400;
+$modalContentInputsInputFontStyle: normal;
+$modalContentInputsInputFontSize: 20px;
+$modalContentInputsInputHeight: 50px;
+$modalContentInputsInputWidth: 100%;
+$modalContentInputsInputBg: #F2F3F3;
+$modalContentInputsInputBorder: none;
+$modalContentInputsInputBorderBottom: 2px solid #233238;
+$modalContentInputsInputBorderRadius: 5.33333px 5.33333px 0 0;
+
+      // Modal agregar contenido radio
+$modalContentRadioFontFamily: 'Open Sans';
+$modalContentRadioFontWeight: 400;
+$modalContentRadioFontStyle: normal;
+$modalContentRadioFontSize: 14px;
+$modalContentRadioLineHeight: 32px;
+$modalContentRadioLetterSpacing: 0.01em;
+$modalContentRadioColor: #263238;
+$modalContentRadioWidth: 45%;
+
+      // Modal agregar contenido radio genero
+$modalContentRadioGenderFontFamily: 'Open Sans';
+$modalContentRadioGenderFontStyle: normal;
+$modalContentRadioGenderFontSize: 16px;
+$modalContentRadioGenderLineHeight: 24px;
+$modalContentRadioGenderLetterSpacing: 0.01em;
+$modalContentRadioGenderColor: #000000;
+
+      // Modal agregar contenido radio posición
+$modalContentRadioPositionFontFamily: 'Open Sans';
+$modalContentRadioPositionFontStyle: normal;
+$modalContentRadioPositionFontSize: 16px;
+$modalContentRadioPositionLineHeight: 24px;
+$modalContentRadioPositionLetterSpacing: 0.01em;
+$modalContentRadioPositionColor: #000000;
+
+      // Modal agregar contenido boton
+$modalContentBotonFontFamily: 'Open Sans';
+$modalContentBotonFontWieght: 600;
+$modalContentBotonFontStyle: normal;
+$modalContentBotonFontSize: 17px;
+$modalContentBotonLineHeight: 25px;
+$modalContentBotonLetterSpacing: 0.2em;
+$modalContentBotonColor: #FFFFFF;
+$modalContentBotonBg: rgba(0, 0, 0, 0.6);
+$modalContentBotonBorder: 4px solid #6B63B5;
+$modalContentBotonBoxSizing: border-box;
+$modalContentBotonBorderRadius: 4px;
+$modalContentBotonWidth: 288px;
+$modalContentBotonHeight: 67px;
+
+
+
 // Boton estudiantes-staff
 $stButtonColor: white;
 $stButtonHeight: 67px;

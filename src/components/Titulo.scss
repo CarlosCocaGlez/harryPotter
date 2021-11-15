@@ -88,5 +88,226 @@
   }
 }
 
+// Modal
+.modal{
+  color: #333333;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $modalBgColor;
 
+  @include phone{
+    position: fixed;
+    padding-top: 10px;
+  }
 
+  .addModal__content{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+    background-color: $modalBgContentColor;
+    border: $modalContentBorder;
+    border-radius: $modalContentBorderRadius;
+
+    @include phone{
+      width: 70%;
+    }
+
+    .addModal__content__title{
+      display: flex;
+      justify-content: space-between;
+
+      .addModal__content__title__titulo{
+        font-family: $modalContentTitleFontFamily;
+        font-weight: $modalContentTitleFontWeight;
+        font-style: $modalContentTitleFontStyle;
+        font-size: $modalContentTitleFontSize;
+        line-height: $modalContentTitleLineHeight;
+        color: $modalContentTitleColor;
+      }
+
+      .addModal__content__title__close{
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .addModal__content__inputs{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include phone{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+
+      .addModal__content__inputs__box{
+        margin: 20px 0 12px 0;
+        width: calc(100%/2 - 20px);
+
+        @include phone{
+          margin: 0;
+          width: 100%;
+        }
+
+        .addModal__content__inputs__box__details{
+          font-family:$modalContentInputsFontFamily;
+          font-weight:$modalContentInputsFontWeight;
+          font-style:$modalContentInputsFontStyle;
+          font-size:$modalContentInputsFontSize;
+          line-height:$modalContentInputsLineHeight;
+          letter-spacing:$modalContentInputsLetterSpacing;
+          color:$modalContentInputsColor;
+          text-transform: uppercase;
+        }
+      }
+
+      .addModal__content__inputs__box input{
+        font-family:$modalContentInputsFontFamily;
+        font-weight:$modalContentInputsFontWeight;
+        font-style:$modalContentInputsFontStyle;
+        font-size:$modalContentInputsFontSize;
+        height:$modalContentInputsInputHeight;
+        width:$modalContentInputsInputWidth;
+        background:$modalContentInputsInputBg;
+        border:$modalContentInputsInputBorder;
+        border-bottom:$modalContentInputsInputBorderBottom;
+        border-radius:$modalContentInputsInputBorderRadius;
+      }
+    }
+
+    .addModal__content__inputs__radio{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px 0;
+
+      @include phone{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+
+      .addModal__content__inputs__radio__gender{
+        font-family: $modalContentRadioFontFamily;
+        font-weight: $modalContentRadioFontWeight;
+        font-style: $modalContentRadioFontStyle;
+        font-size: $modalContentRadioFontSize;
+        line-height: $modalContentRadioLineHeight;
+        letter-spacing: $modalContentRadioLetterSpacing;
+        color: $modalContentRadioColor;
+        width: $modalContentRadioWidth;
+        text-transform: uppercase;
+
+        @include phone{
+          width: 100%;
+          margin: 5% 0;
+        }
+
+        .addModal__content__inputs__gender_category{
+          display: flex;
+          flex-direction: row;
+          font-family:  $modalContentRadioGenderFontFamily;
+          font-style: $modalContentRadioGenderFontStyle;
+          font-size: $modalContentRadioGenderFontSize;
+          line-height: $modalContentRadioGenderLineHeight;
+          letter-spacing: $modalContentRadioGenderLetterSpacing;
+          color: $modalContentRadioGenderColor;
+          text-transform: none;
+
+          .addModal__content__inputs__gender__category__mujer{
+            margin-right: 25%;
+          }
+        }
+      }
+
+      .addModal__content__inputs__radio__position{
+        font-family: $modalContentRadioFontFamily;
+        font-weight: $modalContentRadioFontWeight;
+        font-style: $modalContentRadioFontStyle;
+        font-size: $modalContentRadioFontSize;
+        line-height: $modalContentRadioLineHeight;
+        letter-spacing: $modalContentRadioLetterSpacing;
+        color: $modalContentRadioColor;
+        width: $modalContentRadioWidth;
+        text-transform: uppercase;
+
+        @include phone{
+          width: 100%;
+          margin: 5% 0;
+        }
+
+        .addModal__content__inputs__position_category{
+          display: flex;
+          flex-direction: row;
+          font-family: $modalContentRadioPositionFontFamily;
+          font-size: $modalContentRadioPositionFontStyle;
+          font-style: $modalContentRadioPositionFontSize;
+          line-height: $modalContentRadioPositionLineHeight;
+          letter-spacing: $modalContentRadioPositionLetterSpacing;
+          color: $modalContentRadioPositionColor;
+          text-transform: none;
+
+          .addModal__content__inputs__position__category__student{
+            margin-right: 25%;
+          }
+        }
+      }
+    }
+
+    .addModal__inputs__box__image{
+      margin: 10px 0;
+
+      .addModal__inputs__box__image__details{
+        font-family: $modalContentInputsFontFamily;
+        font-weight: $modalContentInputsFontWeight;
+        font-style: $modalContentInputsFontStyle;
+        font-size: $modalContentInputsFontSize;
+        line-height: $modalContentInputsLineHeight;
+        letter-spacing: $modalContentInputsLetterSpacing;
+        color: $modalContentInputsColor;
+        width: 237px;
+        height: 25px;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+      #image{
+        display: none;
+      }
+    }
+
+    .addModal__inputs__box__submit{
+      display: flex;
+      justify-content: center;
+      .addModal__inputs__box__submit__boton{
+        font-family: $modalContentBotonFontFamily;
+        font-weight: $modalContentBotonFontWieght;
+        font-style: $modalContentBotonFontStyle;
+        font-size: $modalContentBotonFontSize;
+        line-height: $modalContentBotonLineHeight;
+        letter-spacing: $modalContentBotonLetterSpacing;
+        color: $modalContentBotonColor;
+        background: $modalContentBotonBg;
+        border: $modalContentBotonBorder;
+        box-sizing: $modalContentBotonBoxSizing;
+        border-radius: $modalContentBotonBorderRadius;
+        width: $modalContentBotonWidth;
+        height: $modalContentBotonHeight;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+}
