@@ -2,7 +2,7 @@ import { BiBookmark } from "react-icons/bi";
 import {BsFillBookmarkFill} from 'react-icons/bs'
 
 import {connect} from "react-redux";
-import {FAVORITOS} from "../redux/actions";
+import {FAVORITOS, NO_FAVORITOS} from "../redux/actions";
 
 const Card = (hp) => {
     const {
@@ -16,7 +16,8 @@ const Card = (hp) => {
         hogwartsStudent,
         alive,
         favorite,
-        favoritos
+        favoritos,
+        nofavoritos
     } = hp
     return (
         <div className={`card ${alive ? 'vivo' : 'muerto'}`}>
@@ -33,7 +34,7 @@ const Card = (hp) => {
                             favorite ?
                                 <BsFillBookmarkFill
                                     className='card__der__status__icon'
-                                    onClick={() => {favoritos()}}
+                                    onClick={() => {nofavoritos()}}
                                 />
                                 :
                                 <BiBookmark
@@ -59,6 +60,6 @@ const Card = (hp) => {
 
 const mapDispatchToProps = (dispatch, ownProps) =>{
     const {name} = ownProps
-    return { favoritos: () => dispatch({type:FAVORITOS, payload:{name}})}
+    return { favoritos: () => dispatch({type:FAVORITOS, payload:{name}}), nofavoritos: () => dispatch({type:NO_FAVORITOS, payload:{name}})}
 }
 export default connect(null, mapDispatchToProps)(Card)
