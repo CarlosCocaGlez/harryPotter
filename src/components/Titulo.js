@@ -21,7 +21,7 @@ const Titulo = ({hpInfo}) => {
     const [ genero, setGenero ] = useState('')
     const [ posicion, setPosicion ] = useState('')
 
-    const url = 'http://localhost:3006/hpStudents'
+    const url = 'https://onepiece-api-charleslayet.herokuapp.com/hpStudents'
 
     const showModalHandle = () =>{
         setShowModal('block')
