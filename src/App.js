@@ -12,7 +12,7 @@ function App() {
     const [ loading, setLoading ] = useState(true)
     const [ hpInfo, setHpInfo ] = useState([])
 
-    const url = 'http://localhost:3006/hpStudents'
+    const url = 'https://onepiece-api-charleslayet.herokuapp.com/hpStudents'
 
     async function hpDatos() {
         try{
