@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState} from 'react'
 import './Contenido.scss'
 import { Loading } from "./Loading";
-import { Card } from "./Card";
+import Card from "./Card";
 import { v4 as uuidv4 } from "uuid";
-import axios from 'axios'
 
+import { connect } from "react-redux";
 
-export const Contenido = () => {
+const Contenido = ({hpInfo, loading}) => {
+
 
     const [ activeStudents, setActiveStudents ] = useState(true)
     const [ activeStaff, setActiveStaff ] = useState(false)
-    const [ loading, setLoading ] = useState(true)
-    const [ hpInfo, setHpInfo ] = useState([])
 
     const studentsHandle = () => {
         setActiveStudents(true)
@@ -22,23 +21,6 @@ export const Contenido = () => {
         setActiveStaff(true)
         setActiveStudents(false)
     }
-
-    const url = 'http://localhost:3006/hpStudents'
-
-    async function hpDatos() {
-        try{
-            const res = await axios.get(url)
-            setLoading(false)
-            setHpInfo(res.data)
-        }catch(err){
-            setLoading(false)
-            console.log(err)
-        }
-    }
-
-    useEffect(() => {
-        hpDatos()
-    }, [])
 
     return(
         <>
@@ -72,3 +54,10 @@ export const Contenido = () => {
         </>
     )
 }
+
+const mapStateToProps = (store) => {
+    const {hpInfo, loading} = store
+    return {hpInfo, loading}
+}
+
+export default connect(mapStateToProps)(Contenido)

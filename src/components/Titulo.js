@@ -1,16 +1,19 @@
 import React, {useState} from "react";
+import DropdownFavoritos from "./DropdownFavoritos";
 import './Titulo.scss';
-import { BsFillBookmarkFill } from 'react-icons/bs'
+import {BsFillBookmarkFill} from 'react-icons/bs'
 import { FaUserPlus } from 'react-icons/fa'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 import axios from 'axios'
 import { v4 as uuidv4 } from "uuid";
-
 import hp from '../assets/images/harryPotter.png'
 
-export const Titulo = () => {
+import {connect} from "react-redux";
+
+const Titulo = ({hpInfo}) => {
 
     const [ showModal, setShowModal ] = useState('none')
+    const [ showDropdown, setShowDropdown ] = useState(false)
     const [ nombre, setNombre ] = useState('')
     const [ cumple, setCumple ] = useState('')
     const [ ojos, setOjos ] = useState('')
@@ -24,6 +27,10 @@ export const Titulo = () => {
         setShowModal('block')
     }
 
+    const showDropdownHandle = () =>{
+        setShowDropdown(!showDropdown)
+    }
+
     const hideModalHandle = () =>{
         setShowModal('none')
     }
@@ -31,13 +38,13 @@ export const Titulo = () => {
     const guardarHandle = async(e) => {
         e.preventDefault()
         try{
-            console.log(nombre, cumple, ojos, pelo, genero, posicion)
             await axios.post(url,{
                 id: uuidv4(),
                 name: nombre,
                 gender: genero,
                 dateOfBirth: cumple,
                 eyeColour: ojos,
+                hairColour: pelo,
                 hogwartsStudent: posicion==='Estudiante',
                 hogwartsStaff: posicion==='Staff',
                 image: "http://hp-api.herokuapp.com/images/harry.jpg"
@@ -48,10 +55,11 @@ export const Titulo = () => {
             console.log(`${e} 💥`)
         }
     }
+
     return(
         <>
             <div className='addFavButton'>
-                <button className='addFavButton__AddFav addFavButton__Fav'>
+                <button className='addFavButton__AddFav addFavButton__Fav' onClick={showDropdownHandle}>
                     Favoritos
                     <BsFillBookmarkFill className='addFavButton__Icon' />
                 </button>
@@ -59,6 +67,19 @@ export const Titulo = () => {
                     Agregar
                     <FaUserPlus className='addFavButton__Icon' />
                 </button>
+                <span className='addFavButton__AddFav__List' style={{display:`${showDropdown ? 'block' : 'none'}`}}>
+                    {
+                        // eslint-disable-next-line
+                        hpInfo.map((hpFav)=>{
+                            const { favorite } = hpFav
+                            if(favorite){
+                                return (
+                                    <DropdownFavoritos key={uuidv4()} {...hpFav}  />
+                                )
+                            }
+                        })
+                    }
+                </span>
             </div>
             <div className='titulo'>
                 <img className='titulo__img' src={hp} alt="harryPotter"/>
@@ -133,3 +154,11 @@ export const Titulo = () => {
         </>
     )
 }
+
+const mapStateToProps = (store) => {
+    const {hpInfo} = store
+    return {hpInfo}
+}
+
+export default connect(mapStateToProps)(Titulo)
+
