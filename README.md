@@ -17,6 +17,7 @@
 - Agregar mas campos a la hora de crear nuevos personajes
 - Ordenar por fecha de cumpleaños, tal vez
 - Editar personajes
+- Una alerta mas bonita para cuando los usuarios quieran agregar mas de un personaje favorito
 - Hacer pruebas unitarias :S
 
 ###Un pain point o bug
