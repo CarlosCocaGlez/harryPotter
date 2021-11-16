@@ -4,9 +4,7 @@
 
 - Clonar el repositorio
 - `npm i` para instalar todas las dependencias
-- Dirigirse al repositorio [json](https://github.com/CarlosCocaGlez/hpApi) para añadirlo al mismo nivel que la carpeta de este repositorio
-- Nuevamente `npm i` para instalar las dependencias del nuevo repositorio
-- `npm start` en ambas carpetas para correrlo
+- `npm start` para correrlo
 
 ###Lo que mas me gusto de mi desarrollo
 
