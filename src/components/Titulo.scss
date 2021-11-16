@@ -35,6 +35,13 @@
     border-radius: 10px;
     background-color: #6B63B5FF;
 
+    @include phone{
+      position: absolute;
+      margin-top: 1px;
+      bottom: 100%;
+      width: 80%;
+    }
+
     .addFavButton__AddFav__List__Names{
       display: flex;
       flex-wrap: wrap;
@@ -42,12 +49,16 @@
       justify-content: space-between;
       list-style-type: none;
       vertical-align: center;
-      font-family: 'Open Sans';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 25px;
-      color: #FFFFFF;
+      font-family: $favButtonFontFamily;
+      font-style: $favButtonFontStyle;
+      font-weight: $favButtonFontWeight;
+      font-size: $favButtonFontSize;
+      line-height: $favButtonLineHeight;
+      color: $favButtonColor;
+
+      @include phone{
+        font-size: 16px;
+      }
     }
 
     .addFavButton__AddFav__List__Names img{
