@@ -9,6 +9,8 @@
 ###Lo que mas me gusto de mi desarrollo
 
 - Haber trabajado con Redux en un proyecto solicitado por una empresa (No me emocionan tanto trabajar con REDUX en proyectos personales que quizas no salgan a la luz)
+
+
 ###¿Qué hubiera mejorado o que más hubiera hecho de haber tenido más tiempo?
 
 - Posibilidad de ver la tarjeta completa de cada personaje
