@@ -11,14 +11,23 @@ const Contenido = ({hpInfo, loading}) => {
 
     const [ activeStudents, setActiveStudents ] = useState(true)
     const [ activeStaff, setActiveStaff ] = useState(false)
+    const [ activeAlive, setActiveAlive ] = useState(false)
 
     const studentsHandle = () => {
         setActiveStudents(true)
         setActiveStaff(false)
+        setActiveAlive(false)
     }
 
     const staffHandle = () => {
         setActiveStaff(true)
+        setActiveStudents(false)
+        setActiveAlive(false)
+    }
+
+    const aliveHandle = () => {
+        setActiveAlive(true)
+        setActiveStaff(false)
         setActiveStudents(false)
     }
 
@@ -31,7 +40,8 @@ const Contenido = ({hpInfo, loading}) => {
                     <>
                         <div className='botones'>
                             <button className={`boton boton__student ${activeStudents ? 'active' : ''}`} onClick={studentsHandle}>Estudiantes</button>
-                            <button className={`boton ${activeStaff ? 'active' : ''}`} onClick={staffHandle}>Staff</button>
+                            <button className={`boton boton__staff ${activeStaff ? 'active' : ''}`} onClick={staffHandle}>Staff</button>
+                            <button className={`boton ${activeAlive ? 'active' : ''}`} onClick={aliveHandle}>Vivos</button>
                         </div>
                         <div className="container">
                             {
@@ -42,6 +52,10 @@ const Contenido = ({hpInfo, loading}) => {
                                             <Card key={uuidv4()} {...hp} />
                                         )
                                     }else if(hp.hogwartsStaff && activeStaff){
+                                        return(
+                                            <Card key={uuidv4()} {...hp} />
+                                        )
+                                    }else if(hp.alive && activeAlive){
                                         return(
                                             <Card key={uuidv4()} {...hp} />
                                         )
